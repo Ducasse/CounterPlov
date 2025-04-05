@@ -31,6 +31,19 @@ CounterTest >> testIncrement [
 ]
 
 { #category : 'tests' }
+CounterTest >> testIncrement2 [
+
+	| c |
+	c := Counter new.
+	c count: 23.
+	c increment.
+	c increment; increment.
+
+	
+	self assert: c count equals: 26
+]
+
+{ #category : 'tests' }
 CounterTest >> testPrintString [
 
 	| c |
